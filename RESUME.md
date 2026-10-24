@@ -1,5 +1,9 @@
 # 继续制作完整 v2
 
+仓库：https://github.com/zhu574/Aipet-SilverDragon
+
+后续修改以本仓库的 `production/run/` 为准；原始 `.codex/pet-runs/silver-dragon` 仅作历史备份。主分支 `main`，九组基础动作试用标签 `v0.1.0-preview`。
+
 ## 用户已确认
 
 - 人物：成熟、冷静、高贵、智慧的龙族御姐，沿用新版母版。

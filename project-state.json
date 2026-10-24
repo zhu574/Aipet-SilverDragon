@@ -9,12 +9,15 @@
   "preview_only_despill": "releases/v0.1.0-preview/qa/chroma-despill.json",
   "source_snapshot": "production/run",
   "original_working_run": "C:\\Users\\沈建熙\\.codex\\pet-runs\\silver-dragon",
-  "remote_upload_performed": false,
+  "remote_upload_performed": true,
   "git_initialized": true,
   "preview_installed": true,
   "preview_package_id": "silver-dragon-preview",
   "preview_app_load_verified": false,
   "updated_at": "2026-10-24T18:23:46.696507+08:00",
   "initial_branch": "main",
-  "remote_status": "awaiting_repository_url"
+  "remote_status": "pushed",
+  "remote_url": "https://github.com/zhu574/Aipet-SilverDragon.git",
+  "repository_url": "https://github.com/zhu574/Aipet-SilverDragon",
+  "development_source": "production/run"
 }

@@ -39,7 +39,7 @@
 | `FEEDBACK.md` | 试用反馈记录 |
 | `project-state.json` | 试用版和完整 v2 的状态区分 |
 
-原始工作目录仍保留在本机 `.codex/pet-runs/silver-dragon`。`production/run/` 是本次整理的恢复快照；后续继续制作时应同步更新快照，避免两处进度分叉。
+后续开发以本仓库的 `production/run/` 为准。原始工作目录 `.codex/pet-runs/silver-dragon` 保留作本机历史备份，避免同时在两处修改导致进度分叉。
 
 ## 用 Git 保存
 
@@ -47,4 +47,8 @@
 
 提交已认可的素材和包即可；密钥、`.env`、临时文件、安装记录及失败大图不应提交。当前单个文件约 2.1 MiB，尚不需要 Git LFS。后续持续积累大量图片版本时，可再评估 LFS 或单独保存历史素材。
 
-本项目已初始化本地 Git 仓库，主分支为 `main`，试用版使用 `v0.1.0-preview` 标签。远程仓库尚待配置，未上传。
+远程仓库：https://github.com/zhu574/Aipet-SilverDragon
+
+主分支为 `main`，试用版标签为 `v0.1.0-preview`。初始代码、素材及任务断点已推送。继续开发前先阅读 `RESUME.md`；记录体验时更新 `FEEDBACK.md`。
+
+当前电脑已在本仓库设置 Git 的网络兼容选项与系统代理，未改动全局配置。换电脑后需使用新电脑自己的网络配置。

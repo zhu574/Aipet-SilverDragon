@@ -28,13 +28,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 2857,
-      "sha256": "c64dc927cf0990f620dc3e0c46749e00a145c23e9b94db1227f10169fe4eeacd"
+      "bytes": 3106,
+      "sha256": "1dc892eff0084f72472207f7c3576ec9f515dab77db06b7915eb2726069b3672"
     },
     {
       "path": "RESUME.md",
-      "bytes": 2627,
-      "sha256": "265fe2eb1561a1383215d182434e2762affad109c64fd088f5721de46a22905b"
+      "bytes": 2868,
+      "sha256": "7fbc11e593b471d65f091261a75790145040b1e2a430f0a7de50aa352a4eb29c"
     },
     {
       "path": "adapter/adapter.json",
@@ -763,8 +763,8 @@
     },
     {
       "path": "project-state.json",
-      "bytes": 720,
-      "sha256": "afe33fe6590c4205467b188871a79e3025c3b9eb9424c966f33d7166b2111508"
+      "bytes": 880,
+      "sha256": "98c4f5ec30d5a3f77bd493d6cc58f81b287edceec058467a44598364b0392738"
     },
     {
       "path": "releases/v0.1.0-preview/checksums.json",
@@ -868,8 +868,8 @@
     },
     {
       "path": "制作进度.md",
-      "bytes": 615,
-      "sha256": "5ff3d8bbcc999bd6d023842913abc736424f15dd43810e4a013f955bcdd05373"
+      "bytes": 686,
+      "sha256": "ada0a9e2d0805666a1a63a19bc87289232372b974a888c27ee5bfc0154c0ac65"
     }
   ]
 }
