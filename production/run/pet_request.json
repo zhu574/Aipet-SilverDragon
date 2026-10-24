@@ -1,0 +1,281 @@
+{
+  "pet_id": "silver-dragon",
+  "display_name": "银霜",
+  "description": "银白长发、紫水晶眼眸的龙族御姐，气质高贵、冷静而睿智。",
+  "created_at": "2026-10-24T13:37:29.772608+08:00",
+  "sprite_version_number": 2,
+  "atlas": {
+    "columns": 8,
+    "rows": 11,
+    "cell_width": 192,
+    "cell_height": 208,
+    "width": 1536,
+    "height": 2288
+  },
+  "rows": [
+    {
+      "state": "idle",
+      "row": 0,
+      "frames": 6,
+      "purpose": "calm resting, breathing, and blinking loop"
+    },
+    {
+      "state": "running-right",
+      "row": 1,
+      "frames": 8,
+      "purpose": "rightward drag movement loop"
+    },
+    {
+      "state": "running-left",
+      "row": 2,
+      "frames": 8,
+      "purpose": "leftward drag movement loop"
+    },
+    {
+      "state": "waving",
+      "row": 3,
+      "frames": 4,
+      "purpose": "greeting or attention gesture"
+    },
+    {
+      "state": "jumping",
+      "row": 4,
+      "frames": 5,
+      "purpose": "hover or playful jump"
+    },
+    {
+      "state": "failed",
+      "row": 5,
+      "frames": 8,
+      "purpose": "blocked, failed, or cancelled reaction"
+    },
+    {
+      "state": "waiting",
+      "row": 6,
+      "frames": 6,
+      "purpose": "waiting for approval, help, or user input"
+    },
+    {
+      "state": "running",
+      "row": 7,
+      "frames": 6,
+      "purpose": "active task work or processing"
+    },
+    {
+      "state": "review",
+      "row": 8,
+      "frames": 6,
+      "purpose": "ready or completed output review"
+    },
+    {
+      "state": "look-row-9",
+      "row": 9,
+      "frames": 8,
+      "directions": [
+        "000",
+        "022.5",
+        "045",
+        "067.5",
+        "090",
+        "112.5",
+        "135",
+        "157.5"
+      ],
+      "purpose": "clockwise look directions from up through down-right"
+    },
+    {
+      "state": "look-row-10",
+      "row": 10,
+      "frames": 8,
+      "directions": [
+        "180",
+        "202.5",
+        "225",
+        "247.5",
+        "270",
+        "292.5",
+        "315",
+        "337.5"
+      ],
+      "purpose": "clockwise look directions from down through up-left"
+    }
+  ],
+  "layout_guides": [
+    {
+      "state": "idle",
+      "path": "C:\\Users\\沈建熙\\.codex\\pet-runs\\silver-dragon\\references\\layout-guides-spaced\\idle.png",
+      "width": 2304,
+      "height": 1024,
+      "frames": 6,
+      "cell_width": 384,
+      "cell_height": 1024,
+      "safe_margin_x": 64,
+      "safe_margin_y": 302,
+      "usage": "layout guide input only; do not copy visible guide lines into generated sprite strips"
+    },
+    {
+      "state": "running-right",
+      "path": "C:\\Users\\沈建熙\\.codex\\pet-runs\\silver-dragon\\references\\layout-guides-spaced\\running-right.png",
+      "width": 3072,
+      "height": 1024,
+      "frames": 8,
+      "cell_width": 384,
+      "cell_height": 1024,
+      "safe_margin_x": 64,
+      "safe_margin_y": 302,
+      "usage": "layout guide input only; do not copy visible guide lines into generated sprite strips"
+    },
+    {
+      "state": "running-left",
+      "path": "C:\\Users\\沈建熙\\.codex\\pet-runs\\silver-dragon\\references\\layout-guides-spaced\\running-left.png",
+      "width": 3072,
+      "height": 1024,
+      "frames": 8,
+      "cell_width": 384,
+      "cell_height": 1024,
+      "safe_margin_x": 64,
+      "safe_margin_y": 302,
+      "usage": "layout guide input only; do not copy visible guide lines into generated sprite strips"
+    },
+    {
+      "state": "waving",
+      "path": "C:\\Users\\沈建熙\\.codex\\pet-runs\\silver-dragon\\references\\layout-guides-spaced\\waving.png",
+      "width": 1536,
+      "height": 1024,
+      "frames": 4,
+      "cell_width": 384,
+      "cell_height": 1024,
+      "safe_margin_x": 64,
+      "safe_margin_y": 302,
+      "usage": "layout guide input only; do not copy visible guide lines into generated sprite strips"
+    },
+    {
+      "state": "jumping",
+      "path": "C:\\Users\\沈建熙\\.codex\\pet-runs\\silver-dragon\\references\\layout-guides-spaced\\jumping.png",
+      "width": 1920,
+      "height": 1024,
+      "frames": 5,
+      "cell_width": 384,
+      "cell_height": 1024,
+      "safe_margin_x": 64,
+      "safe_margin_y": 302,
+      "usage": "layout guide input only; do not copy visible guide lines into generated sprite strips"
+    },
+    {
+      "state": "failed",
+      "path": "C:\\Users\\沈建熙\\.codex\\pet-runs\\silver-dragon\\references\\layout-guides-spaced\\failed.png",
+      "width": 3072,
+      "height": 1024,
+      "frames": 8,
+      "cell_width": 384,
+      "cell_height": 1024,
+      "safe_margin_x": 64,
+      "safe_margin_y": 302,
+      "usage": "layout guide input only; do not copy visible guide lines into generated sprite strips"
+    },
+    {
+      "state": "waiting",
+      "path": "C:\\Users\\沈建熙\\.codex\\pet-runs\\silver-dragon\\references\\layout-guides-spaced\\waiting.png",
+      "width": 2304,
+      "height": 1024,
+      "frames": 6,
+      "cell_width": 384,
+      "cell_height": 1024,
+      "safe_margin_x": 64,
+      "safe_margin_y": 302,
+      "usage": "layout guide input only; do not copy visible guide lines into generated sprite strips"
+    },
+    {
+      "state": "running",
+      "path": "C:\\Users\\沈建熙\\.codex\\pet-runs\\silver-dragon\\references\\layout-guides-spaced\\running.png",
+      "width": 2304,
+      "height": 1024,
+      "frames": 6,
+      "cell_width": 384,
+      "cell_height": 1024,
+      "safe_margin_x": 64,
+      "safe_margin_y": 302,
+      "usage": "layout guide input only; do not copy visible guide lines into generated sprite strips"
+    },
+    {
+      "state": "review",
+      "path": "C:\\Users\\沈建熙\\.codex\\pet-runs\\silver-dragon\\references\\layout-guides-spaced\\review.png",
+      "width": 2304,
+      "height": 1024,
+      "frames": 6,
+      "cell_width": 384,
+      "cell_height": 1024,
+      "safe_margin_x": 64,
+      "safe_margin_y": 302,
+      "usage": "layout guide input only; do not copy visible guide lines into generated sprite strips"
+    },
+    {
+      "state": "look-cardinals",
+      "path": "C:\\Users\\沈建熙\\.codex\\pet-runs\\silver-dragon\\references\\layout-guides-spaced\\look-cardinals.png",
+      "width": 1536,
+      "height": 1024,
+      "frames": 4,
+      "cell_width": 384,
+      "cell_height": 1024,
+      "safe_margin_x": 64,
+      "safe_margin_y": 302,
+      "usage": "spaced layout guide input only; omit visible marks, safe content x64..320 and y302..722 per 384x1024 slot"
+    },
+    {
+      "state": "look-row-9",
+      "path": "C:\\Users\\沈建熙\\.codex\\pet-runs\\silver-dragon\\references\\layout-guides-spaced\\look-row-9.png",
+      "width": 3072,
+      "height": 1024,
+      "frames": 8,
+      "cell_width": 384,
+      "cell_height": 1024,
+      "safe_margin_x": 64,
+      "safe_margin_y": 302,
+      "usage": "spaced layout guide input only; omit visible marks, safe content x64..320 and y302..722 per 384x1024 slot"
+    },
+    {
+      "state": "look-row-10",
+      "path": "C:\\Users\\沈建熙\\.codex\\pet-runs\\silver-dragon\\references\\layout-guides-spaced\\look-row-10.png",
+      "width": 3072,
+      "height": 1024,
+      "frames": 8,
+      "cell_width": 384,
+      "cell_height": 1024,
+      "safe_margin_x": 64,
+      "safe_margin_y": 302,
+      "usage": "spaced layout guide input only; omit visible marks, safe content x64..320 and y302..722 per 384x1024 slot"
+    }
+  ],
+  "references": [
+    {
+      "path": "C:\\Users\\沈建熙\\.codex\\pet-runs\\silver-dragon\\references\\reference-01.jpg",
+      "width": 1078,
+      "height": 1430,
+      "mode": "RGB",
+      "format": "JPEG",
+      "source_path": "C:\\Users\\沈建熙\\AppData\\Local\\Temp\\codex-clipboard-97f52570-8ba5-4b92-9251-1dee30cd39eb.jpg",
+      "copied_path": "C:\\Users\\沈建熙\\.codex\\pet-runs\\silver-dragon\\references\\reference-01.jpg"
+    }
+  ],
+  "chroma_key": {
+    "hex": "#00FF00",
+    "rgb": [
+      0,
+      255,
+      0
+    ],
+    "name": "green",
+    "selection": "auto",
+    "score": 222.93
+  },
+  "pet_notes": "Mature noble dragon woman based on the original user reference: adult appearance around thirty, elegant 6.5–7-head-tall anatomy, silver-white long hair with pale lavender shading, amethyst-violet almond eyes, pale ridged horns, pointed ears, compact attached folded lavender membrane wings, one attached delicately scaled tapered dragon tail, and an elegant white high-neck gown with restrained silver and lavender details. Her expression is composed, discerning and quietly authoritative. Prioritize a refined mature face, accurate delicate eyelids and lips, clear cheek/jaw anatomy, precise clean linework and polished smooth shading. Keep her poised, intelligent and self-possessed; preserve the original identity and avoid chibi anatomy, doll-like features and cute posing. Maintain a complete compact silhouette for desktop animation.",
+  "style_preset": "painterly",
+  "style_notes": "Premium polished anime fantasy character illustration with delicate clean linework, mature elegant anatomy, precise facial structure, finely resolved amethyst eyes, defined layered silver hair, smooth controlled cel-painting blended with soft painterly shading, distinct fabric/metal/horn/scale materials and crisp intentional edges. Preserve a noble, composed, intelligent adult persona and consistent identity across all states.",
+  "style_contract": "Premium polished anime fantasy character illustration with delicate clean linework, mature elegant anatomy, precise facial structure, finely resolved amethyst eyes, defined layered silver hair, smooth controlled cel-painting blended with soft painterly shading, distinct fabric/metal/horn/scale materials and crisp intentional edges. Preserve a noble, composed, intelligent adult persona and consistent identity across all states.",
+  "brand_name": "",
+  "brand_brief": "",
+  "brand_sources": [],
+  "pet_safe_style": "Pet-safe sprite: compact full-body mascot, readable in a 192x208 cell, clear silhouette, simple face, stable palette/materials, and crisp edges for chroma-key extraction.",
+  "primary_generation_skill": "$imagegen",
+  "art_direction_revision": 2
+}

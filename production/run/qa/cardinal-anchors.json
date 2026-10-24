@@ -1,0 +1,76 @@
+{
+  "ok": true,
+  "strip": "C:\\Users\\沈建熙\\.codex\\pet-runs\\silver-dragon\\qa\\look-anchors-repaired-candidate.png",
+  "directions": [
+    "000",
+    "090",
+    "180",
+    "270"
+  ],
+  "errors": [],
+  "anchors": [
+    {
+      "direction": "000",
+      "source_box": [
+        0,
+        0,
+        192,
+        208
+      ],
+      "used_pixels": 12810,
+      "edge_pixels": 0,
+      "output": "C:\\Users\\沈建熙\\.codex\\pet-runs\\silver-dragon\\qa\\cardinal-repaired-check\\000.png"
+    },
+    {
+      "direction": "090",
+      "source_box": [
+        192,
+        0,
+        384,
+        208
+      ],
+      "used_pixels": 12628,
+      "edge_pixels": 0,
+      "output": "C:\\Users\\沈建熙\\.codex\\pet-runs\\silver-dragon\\qa\\cardinal-repaired-check\\090.png"
+    },
+    {
+      "direction": "180",
+      "source_box": [
+        384,
+        0,
+        576,
+        208
+      ],
+      "used_pixels": 15131,
+      "edge_pixels": 0,
+      "output": "C:\\Users\\沈建熙\\.codex\\pet-runs\\silver-dragon\\qa\\cardinal-repaired-check\\180.png"
+    },
+    {
+      "direction": "270",
+      "source_box": [
+        576,
+        0,
+        768,
+        208
+      ],
+      "used_pixels": 12609,
+      "edge_pixels": 0,
+      "output": "C:\\Users\\沈建熙\\.codex\\pet-runs\\silver-dragon\\qa\\cardinal-repaired-check\\270.png"
+    }
+  ],
+  "provenance": {
+    "000": "generated/look-cardinals-v2.png components[0]",
+    "090": "generated/look-cardinals-v2.png components[1]",
+    "180": "generated/look-anchor-180-open.png chroma removal + fit_to_cell",
+    "270": "generated/look-cardinals-v2.png components[3]"
+  },
+  "source_slot_failure": "Preserved in cardinal-fixed-slot-v2-failed.json; exact component recovery validated in cardinal-components-review.json",
+  "semantic_review": {
+    "000": "pass: raised chin and upward open-eyed gaze",
+    "090": "pass: nose and visible eyes aim screen-right with front torso",
+    "180": "pass: tucked chin with both violet eyes visibly open and lowered; source face crop confirms lowered irises, not closed eyelids",
+    "270": "pass: nose and eye gaze screen-left; front torso"
+  },
+  "approved_strip": "decoded/look-anchors-approved.png",
+  "reference_only_warning": "Single down reference retains a raised canonical hand near chest; complete look-row prompts explicitly enforce constant resting hands. Approve final row only if no arm discontinuity."
+}

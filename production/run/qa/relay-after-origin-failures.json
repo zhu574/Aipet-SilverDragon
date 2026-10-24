@@ -1,0 +1,14 @@
+{
+  "command": "check",
+  "started_at": "2026-10-24T10:11:15.436126+00:00",
+  "base_url": "https://api.awmc-codex.top/v1",
+  "model": "gpt-image-2",
+  "automatic_retries": 0,
+  "credential_available": true,
+  "models_endpoint_ok": true,
+  "requested_model": "gpt-image-2",
+  "requested_model_listed": true,
+  "image_generation_verified": false,
+  "status": "ok",
+  "elapsed_seconds": 1.14
+}

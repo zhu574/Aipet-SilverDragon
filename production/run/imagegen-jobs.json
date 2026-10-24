@@ -1,0 +1,807 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-10-24T13:37:29.79838+08:00",
+  "run_dir": "C:\\Users\\沈建熙\\.codex\\pet-runs\\silver-dragon",
+  "primary_generation_skill": "$imagegen",
+  "jobs": [
+    {
+      "id": "base",
+      "kind": "base-pet",
+      "status": "complete",
+      "prompt_file": "prompts/base-pet-regal-v2.md",
+      "input_images": [
+        {
+          "path": "references\\reference-01.jpg",
+          "role": "pet reference"
+        }
+      ],
+      "output_path": "decoded/base.png",
+      "depends_on": [],
+      "generation_skill": "$imagegen",
+      "requires_grounded_generation": true,
+      "allow_prompt_only_generation": false,
+      "selected_source": "generated/base-regal-02.png",
+      "selected_prompt": "prompts/base-regal-safe-frame.md",
+      "selection_note": "Geometry repair approved: both horn tips, shoe tips, and skirt hem complete with green safety margin; approved mature face, silver hair, violet eyes, folded lavender wings, scaled tail, and asymmetrical ornament retained. Relay returned 1024x1536."
+    },
+    {
+      "id": "idle",
+      "kind": "row-strip",
+      "status": "complete",
+      "prompt_file": "prompts/rows/idle.md",
+      "retry_prompt_file": "prompts/row-retries/idle.md",
+      "input_images": [
+        {
+          "path": "references\\reference-01.jpg",
+          "role": "pet reference"
+        },
+        {
+          "path": "references/layout-guides-spaced/idle.png",
+          "role": "layout guide for 6 frame slots; use for spacing only, do not copy guide lines"
+        },
+        {
+          "path": "references/canonical-base.png",
+          "role": "canonical identity reference"
+        }
+      ],
+      "output_path": "decoded/idle.png",
+      "depends_on": [
+        "base"
+      ],
+      "generation_skill": "$imagegen",
+      "requires_grounded_generation": true,
+      "allow_prompt_only_generation": false,
+      "identity_reference_paths": [
+        "references/canonical-base.png"
+      ],
+      "parallelizable_after": [
+        "base"
+      ],
+      "derivation_policy": {
+        "may_derive": false,
+        "reason": "no deterministic derivation is configured for this state"
+      },
+      "mirror_policy": {},
+      "generation_size": "2304x1024",
+      "generation_quality": "high",
+      "source_path": "generated/idle-v2.png",
+      "selected_source": "generated/idle-v2.png",
+      "selected_prompt": "prompts/rows/idle.md",
+      "selection_note": "Six complete consistent mature poses with green gaps and calm blink-breathing; auto component extraction and required inspection pass.",
+      "completed_at": "2026-10-24T08:27:49.0433855Z",
+      "attempts": [
+        {
+          "source_path": "generated/idle.png",
+          "verdict": "needs_revision",
+          "failure_class": "source-edge geometry",
+          "evidence": "Initial row outer poses reached source canvas edges."
+        },
+        {
+          "source_path": "generated/idle-v2.png",
+          "verdict": "approved",
+          "failure_class": null,
+          "evidence": "Revised spacing pass; extraction and inspection pass."
+        }
+      ]
+    },
+    {
+      "id": "running-right",
+      "kind": "row-strip",
+      "status": "complete",
+      "prompt_file": "prompts/rows/running-right.md",
+      "retry_prompt_file": "prompts/row-retries/running-right.md",
+      "input_images": [
+        {
+          "path": "references\\reference-01.jpg",
+          "role": "pet reference"
+        },
+        {
+          "path": "references/layout-guides-spaced/running-right.png",
+          "role": "layout guide for 8 frame slots; use for spacing only, do not copy guide lines"
+        },
+        {
+          "path": "references/canonical-base.png",
+          "role": "canonical identity reference"
+        }
+      ],
+      "output_path": "decoded/running-right.png",
+      "depends_on": [
+        "base"
+      ],
+      "generation_skill": "$imagegen",
+      "requires_grounded_generation": true,
+      "allow_prompt_only_generation": false,
+      "identity_reference_paths": [
+        "references/canonical-base.png"
+      ],
+      "parallelizable_after": [
+        "base"
+      ],
+      "derivation_policy": {
+        "may_derive": false,
+        "reason": "no deterministic derivation is configured for this state"
+      },
+      "mirror_policy": {},
+      "generation_size": "3072x1024",
+      "generation_quality": "high",
+      "source_path": "generated/running-right-v2.png",
+      "selected_source": "generated/running-right-v2.png",
+      "selected_prompt": "prompts/rows/running-right.md",
+      "selection_note": "Eight complete right-facing poses with clear green gaps and stable baseline; auto component extraction and required inspection pass. Actual relay dimensions 2135x736.",
+      "completed_at": "2026-10-24T08:24:26.9692214Z",
+      "attempts": [
+        {
+          "failure_class": "merged poses or insufficient source margin",
+          "evidence": "Initial strip failed visual layout review and component extraction did not recover distinct frames.",
+          "source_path": "generated/running-right.png",
+          "verdict": "needs_revision"
+        },
+        {
+          "failure_class": null,
+          "evidence": "Revised spaced guide produced separated silhouettes; component extraction and frame inspection pass.",
+          "source_path": "generated/running-right-v2.png",
+          "verdict": "approved"
+        }
+      ]
+    },
+    {
+      "id": "running-left",
+      "kind": "row-strip",
+      "status": "complete",
+      "prompt_file": "prompts/rows/running-left.md",
+      "retry_prompt_file": "prompts/row-retries/running-left.md",
+      "input_images": [
+        {
+          "path": "references\\reference-01.jpg",
+          "role": "pet reference"
+        },
+        {
+          "path": "references/layout-guides-spaced/running-left.png",
+          "role": "layout guide for 8 frame slots; use for spacing only, do not copy guide lines"
+        },
+        {
+          "path": "references/canonical-base.png",
+          "role": "canonical identity reference"
+        },
+        {
+          "path": "decoded/running-right.png",
+          "role": "rightward gait reference for leftward row decision"
+        }
+      ],
+      "output_path": "decoded/running-left.png",
+      "depends_on": [
+        "base",
+        "running-right"
+      ],
+      "generation_skill": "$imagegen",
+      "requires_grounded_generation": true,
+      "allow_prompt_only_generation": false,
+      "identity_reference_paths": [
+        "references/canonical-base.png"
+      ],
+      "parallelizable_after": [
+        "base",
+        "running-right"
+      ],
+      "derivation_policy": {
+        "may_derive": false,
+        "may_derive_from": "running-right",
+        "derivation": "framewise-horizontal-mirror-preserving-order",
+        "requires_explicit_approval": true,
+        "fallback_generation_skill": "$imagegen",
+        "reason": "Asymmetric hair ornament, skirt slit and pendant placement, and single-sided tail must retain anatomical side."
+      },
+      "mirror_policy": {
+        "may_derive": false,
+        "may_derive_from": "running-right",
+        "derivation": "framewise-horizontal-mirror-preserving-order",
+        "requires_explicit_approval": true,
+        "fallback_generation_skill": "$imagegen"
+      },
+      "generation_size": "3072x1024",
+      "generation_quality": "high",
+      "source_path": "generated/running-left.png",
+      "selected_source": "generated/running-left.png",
+      "selected_prompt": "prompts/rows/running-left.md",
+      "selection_note": "Eight complete isolated screen-left-facing adult figures preserve the approved identity and alternating gait; component extraction and inspection pass with no warnings. Independently generated to preserve asymmetric design.",
+      "completed_at": "2026-10-24T08:39:47.36587Z",
+      "attempts": [
+        {
+          "source_path": "generated/running-left.png",
+          "verdict": "approved",
+          "failure_class": null,
+          "evidence": "Eight complete isolated screen-left-facing adult figures preserve the approved identity and alternating gait; component extraction and inspection pass with no warnings. Independently generated to preserve asymmetric design."
+        }
+      ]
+    },
+    {
+      "id": "waving",
+      "kind": "row-strip",
+      "status": "complete",
+      "prompt_file": "prompts/rows/waving.md",
+      "retry_prompt_file": "prompts/row-retries/waving.md",
+      "input_images": [
+        {
+          "path": "references\\reference-01.jpg",
+          "role": "pet reference"
+        },
+        {
+          "path": "references/layout-guides-spaced/waving.png",
+          "role": "layout guide for 4 frame slots; use for spacing only, do not copy guide lines"
+        },
+        {
+          "path": "references/canonical-base.png",
+          "role": "canonical identity reference"
+        }
+      ],
+      "output_path": "decoded/waving.png",
+      "depends_on": [
+        "base"
+      ],
+      "generation_skill": "$imagegen",
+      "requires_grounded_generation": true,
+      "allow_prompt_only_generation": false,
+      "identity_reference_paths": [
+        "references/canonical-base.png"
+      ],
+      "parallelizable_after": [
+        "base"
+      ],
+      "derivation_policy": {
+        "may_derive": false,
+        "reason": "state requires its own generated animation semantics"
+      },
+      "mirror_policy": {},
+      "generation_size": "1536x1024",
+      "generation_quality": "high",
+      "source_path": "generated/waving-v2.png",
+      "selected_source": "generated/waving-v2.png",
+      "selected_prompt": "prompts/rows/waving.md",
+      "selection_note": "Four complete separated poses with a restrained shoulder-height greeting; auto component extraction and required inspection pass. Actual relay dimensions 1536x1024.",
+      "completed_at": "2026-10-24T08:24:26.9919674Z",
+      "attempts": [
+        {
+          "failure_class": "merged poses or insufficient source margin",
+          "evidence": "Initial strip failed visual layout review and component extraction did not recover distinct frames.",
+          "source_path": "generated/waving.png",
+          "verdict": "needs_revision"
+        },
+        {
+          "failure_class": null,
+          "evidence": "Revised spaced guide produced separated silhouettes; component extraction and frame inspection pass.",
+          "source_path": "generated/waving-v2.png",
+          "verdict": "approved"
+        }
+      ]
+    },
+    {
+      "id": "jumping",
+      "kind": "row-strip",
+      "status": "complete",
+      "prompt_file": "prompts/rows/jumping.md",
+      "retry_prompt_file": "prompts/row-retries/jumping.md",
+      "input_images": [
+        {
+          "path": "references\\reference-01.jpg",
+          "role": "pet reference"
+        },
+        {
+          "path": "references/layout-guides-spaced/jumping.png",
+          "role": "layout guide for 5 frame slots; use for spacing only, do not copy guide lines"
+        },
+        {
+          "path": "references/canonical-base.png",
+          "role": "canonical identity reference"
+        }
+      ],
+      "output_path": "decoded/jumping.png",
+      "depends_on": [
+        "base"
+      ],
+      "generation_skill": "$imagegen",
+      "requires_grounded_generation": true,
+      "allow_prompt_only_generation": false,
+      "identity_reference_paths": [
+        "references/canonical-base.png"
+      ],
+      "parallelizable_after": [
+        "base"
+      ],
+      "derivation_policy": {
+        "may_derive": false,
+        "reason": "state requires its own generated animation semantics"
+      },
+      "mirror_policy": {},
+      "generation_size": "1920x1024",
+      "generation_quality": "high",
+      "source_path": "generated/jumping.png",
+      "selected_source": "generated/jumping.png",
+      "selected_prompt": "prompts/rows/jumping.md",
+      "selection_note": "Five complete separated adult poses show a controlled hop with consistent silver-dragon identity; deterministic component extraction and inspection pass with no warnings. Final production extraction uses stable-slots to retain vertical hop timing.",
+      "completed_at": "2026-10-24T08:39:47.36587Z",
+      "attempts": [
+        {
+          "source_path": "generated/jumping.png",
+          "verdict": "approved",
+          "failure_class": null,
+          "evidence": "Five complete separated adult poses show a controlled hop with consistent silver-dragon identity; deterministic component extraction and inspection pass with no warnings."
+        }
+      ],
+      "extraction_method": "stable-slots",
+      "extraction_decision": "Independent QA found per-component resizing erased source hop height; stable-slots preserves shared scale and lift/apex/landing. Only warning is explicitly allowed stable-slots choice."
+    },
+    {
+      "id": "failed",
+      "kind": "row-strip",
+      "status": "complete",
+      "prompt_file": "prompts/rows/failed.md",
+      "retry_prompt_file": "prompts/row-retries/failed.md",
+      "input_images": [
+        {
+          "path": "references\\reference-01.jpg",
+          "role": "pet reference"
+        },
+        {
+          "path": "references/layout-guides-spaced/failed.png",
+          "role": "layout guide for 8 frame slots; use for spacing only, do not copy guide lines"
+        },
+        {
+          "path": "references/canonical-base.png",
+          "role": "canonical identity reference"
+        }
+      ],
+      "output_path": "decoded/failed.png",
+      "depends_on": [
+        "base"
+      ],
+      "generation_skill": "$imagegen",
+      "requires_grounded_generation": true,
+      "allow_prompt_only_generation": false,
+      "identity_reference_paths": [
+        "references/canonical-base.png"
+      ],
+      "parallelizable_after": [
+        "base"
+      ],
+      "derivation_policy": {
+        "may_derive": false,
+        "reason": "state requires its own generated animation semantics"
+      },
+      "mirror_policy": {},
+      "generation_size": "3072x1024",
+      "generation_quality": "high",
+      "source_path": "generated/failed.png",
+      "selected_source": "generated/failed.png",
+      "selected_prompt": "prompts/rows/failed.md",
+      "selection_note": "Eight complete mature poses show restrained setback and recovery with consistent identity; deterministic component extraction and inspection pass with no warnings.",
+      "completed_at": "2026-10-24T08:39:47.36587Z",
+      "attempts": [
+        {
+          "source_path": "generated/failed.png",
+          "verdict": "approved",
+          "failure_class": null,
+          "evidence": "Eight complete mature poses show restrained setback and recovery with consistent identity; deterministic component extraction and inspection pass with no warnings."
+        }
+      ]
+    },
+    {
+      "id": "waiting",
+      "kind": "row-strip",
+      "status": "complete",
+      "prompt_file": "prompts/rows/waiting.md",
+      "retry_prompt_file": "prompts/row-retries/waiting.md",
+      "input_images": [
+        {
+          "path": "references\\reference-01.jpg",
+          "role": "pet reference"
+        },
+        {
+          "path": "references/layout-guides-spaced/waiting.png",
+          "role": "layout guide for 6 frame slots; use for spacing only, do not copy guide lines"
+        },
+        {
+          "path": "references/canonical-base.png",
+          "role": "canonical identity reference"
+        }
+      ],
+      "output_path": "decoded/waiting.png",
+      "depends_on": [
+        "base"
+      ],
+      "generation_skill": "$imagegen",
+      "requires_grounded_generation": true,
+      "allow_prompt_only_generation": false,
+      "identity_reference_paths": [
+        "references/canonical-base.png"
+      ],
+      "parallelizable_after": [
+        "base"
+      ],
+      "derivation_policy": {
+        "may_derive": false,
+        "reason": "state requires its own generated animation semantics"
+      },
+      "mirror_policy": {},
+      "generation_size": "2304x1024",
+      "generation_quality": "high",
+      "source_path": "generated/waiting.png",
+      "selected_source": "generated/waiting.png",
+      "selected_prompt": "prompts/rows/waiting.md",
+      "selection_note": "Six complete isolated adult poses preserve the approved identity and patient waist-level open-palm ask; component extraction and inspection pass with no warnings.",
+      "completed_at": "2026-10-24T08:39:47.36587Z",
+      "attempts": [
+        {
+          "source_path": "generated/waiting.png",
+          "verdict": "approved",
+          "failure_class": null,
+          "evidence": "Six complete isolated adult poses preserve the approved identity and patient waist-level open-palm ask; component extraction and inspection pass with no warnings."
+        }
+      ]
+    },
+    {
+      "id": "running",
+      "kind": "row-strip",
+      "status": "complete",
+      "prompt_file": "prompts/rows/running.md",
+      "retry_prompt_file": "prompts/row-retries/running.md",
+      "input_images": [
+        {
+          "path": "references\\reference-01.jpg",
+          "role": "pet reference"
+        },
+        {
+          "path": "references/layout-guides-spaced/running.png",
+          "role": "layout guide for 6 frame slots; use for spacing only, do not copy guide lines"
+        },
+        {
+          "path": "references/canonical-base.png",
+          "role": "canonical identity reference"
+        }
+      ],
+      "output_path": "decoded/running.png",
+      "depends_on": [
+        "base"
+      ],
+      "generation_skill": "$imagegen",
+      "requires_grounded_generation": true,
+      "allow_prompt_only_generation": false,
+      "identity_reference_paths": [
+        "references/canonical-base.png"
+      ],
+      "parallelizable_after": [
+        "base"
+      ],
+      "derivation_policy": {
+        "may_derive": false,
+        "reason": "state requires its own generated animation semantics"
+      },
+      "mirror_policy": {},
+      "generation_size": "2304x1024",
+      "generation_quality": "high",
+      "source_path": "generated/running.png",
+      "selected_source": "generated/running.png",
+      "selected_prompt": "prompts/rows/running.md",
+      "selection_note": "Six complete adult poses communicate focused work through hand-to-chin thinking, scanning eyes, a subtle nod and relaxed reset; feet remain planted. Component extraction and inspection pass cleanly.",
+      "completed_at": "2026-10-24T08:43:00.043674Z",
+      "attempts": [
+        {
+          "source_path": "generated/running.png",
+          "verdict": "approved",
+          "failure_class": null,
+          "evidence": "Six complete adult poses communicate focused work through hand-to-chin thinking, scanning eyes, a subtle nod and relaxed reset; feet remain planted. Component extraction and inspection pass cleanly."
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "kind": "row-strip",
+      "status": "complete",
+      "prompt_file": "prompts/rows/review.md",
+      "retry_prompt_file": "prompts/row-retries/review.md",
+      "input_images": [
+        {
+          "path": "references\\reference-01.jpg",
+          "role": "pet reference"
+        },
+        {
+          "path": "references/layout-guides-spaced/review.png",
+          "role": "layout guide for 6 frame slots; use for spacing only, do not copy guide lines"
+        },
+        {
+          "path": "references/canonical-base.png",
+          "role": "canonical identity reference"
+        }
+      ],
+      "output_path": "decoded/review.png",
+      "depends_on": [
+        "base"
+      ],
+      "generation_skill": "$imagegen",
+      "requires_grounded_generation": true,
+      "allow_prompt_only_generation": false,
+      "identity_reference_paths": [
+        "references/canonical-base.png"
+      ],
+      "parallelizable_after": [
+        "base"
+      ],
+      "derivation_policy": {
+        "may_derive": false,
+        "reason": "state requires its own generated animation semantics"
+      },
+      "mirror_policy": {},
+      "generation_size": "2304x1024",
+      "generation_quality": "high",
+      "source_path": "generated/review.png",
+      "selected_source": "generated/review.png",
+      "selected_prompt": "prompts/rows/review.md",
+      "selection_note": "Six complete adult poses communicate restrained visual review through attentive gaze, small scan, lean, blink and measured nod, with no added props. Component extraction and inspection pass cleanly.",
+      "completed_at": "2026-10-24T08:43:00.043674Z",
+      "attempts": [
+        {
+          "source_path": "generated/review.png",
+          "verdict": "approved",
+          "failure_class": null,
+          "evidence": "Six complete adult poses communicate restrained visual review through attentive gaze, small scan, lean, blink and measured nod, with no added props. Component extraction and inspection pass cleanly."
+        }
+      ]
+    },
+    {
+      "id": "look-cardinals",
+      "kind": "look-cardinal-strip",
+      "status": "complete",
+      "prompt_file": "prompts/look-cardinals-v2.md",
+      "repair_prompt_files": {
+        "000": "prompts/look-anchor-repairs/000.md",
+        "090": "prompts/look-anchor-repairs/090.md",
+        "180": "prompts/look-anchor-repairs/180-open-eyes.md",
+        "270": "prompts/look-anchor-repairs/270.md"
+      },
+      "input_images": [
+        {
+          "path": "references\\reference-01.jpg",
+          "role": "pet reference"
+        },
+        {
+          "path": "references/layout-guides-spaced/look-cardinals.png",
+          "role": "layout guide for four cardinal slots; use for spacing only, do not copy guide lines"
+        },
+        {
+          "path": "references/canonical-base.png",
+          "role": "canonical identity reference"
+        },
+        {
+          "path": "qa/contact-sheet.png",
+          "role": "approved standard-row identity, scale, and baseline reference"
+        }
+      ],
+      "output_path": "decoded/look-cardinals.png",
+      "extracted_output_paths": [
+        "decoded/look-anchors/000.png",
+        "decoded/look-anchors/090.png",
+        "decoded/look-anchors/180.png",
+        "decoded/look-anchors/270.png"
+      ],
+      "approved_strip_path": "decoded/look-anchors-approved.png",
+      "depends_on": [
+        "idle",
+        "running-right",
+        "running-left",
+        "waving",
+        "jumping",
+        "failed",
+        "waiting",
+        "running",
+        "review"
+      ],
+      "generation_skill": "$imagegen",
+      "requires_grounded_generation": true,
+      "allow_prompt_only_generation": false,
+      "identity_reference_paths": [
+        "references/canonical-base.png"
+      ],
+      "look_mechanics_file": "qa/look-mechanics.md",
+      "directions": [
+        "000",
+        "090",
+        "180",
+        "270"
+      ],
+      "packaging_eligible": false,
+      "parallelizable_after": [
+        "idle",
+        "running-right",
+        "running-left",
+        "waving",
+        "jumping",
+        "failed",
+        "waiting",
+        "running",
+        "review"
+      ],
+      "derivation_policy": {
+        "may_derive": false,
+        "reason": "cardinal directions require grounded pet-specific generation"
+      },
+      "generation_size": "1536x1024",
+      "generation_quality": "high",
+      "attempts": [
+        {
+          "source_path": "generated/look-cardinals.png",
+          "verdict": "rejected",
+          "failure_class": "wrong direction mechanics and source slot edge",
+          "evidence": "000 neutral;180 back view;body turning and pointing instead of gaze;four source slot edges fail."
+        },
+        {
+          "source_path": "generated/look-cardinals-v2.png",
+          "verdict": "partially_usable",
+          "failure_class": "fixed equal-slot clipping;down-eyes unclear",
+          "evidence": "Component extraction recovers4complete source poses without error;000up090right270left have clear gaze;180head lowered but eye openness ambiguous. Repaired using one downanchor as expressly allowed by skill."
+        },
+        {
+          "source_path": "generated/look-anchor-180-open.png",
+          "verdict": "approved",
+          "evidence": "Both violet eyes open with lowered irises under a moderately tucked chin. Full body complete; candidate and normalized strip pass."
+        }
+      ],
+      "extraction_method": "components",
+      "completed_at": "2026-10-24T10:00:06.148031+00:00",
+      "selected_source": "generated/look-cardinals-v2.png + generated/look-anchor-180-open.png",
+      "selection_note": "Three component-recovered cardinals and expressly allowed down-anchor repair pass semantic and normalized source-edge checks."
+    },
+    {
+      "id": "look-row-9",
+      "kind": "look-row-strip",
+      "status": "transport_failed",
+      "prompt_file": "prompts/rows/look-row-9-v2.md",
+      "retry_prompt_file": "prompts/rows/look-row-9-v2.md",
+      "input_images": [
+        {
+          "path": "references\\reference-01.jpg",
+          "role": "pet reference"
+        },
+        {
+          "path": "references/layout-guides-spaced/look-row-9.png",
+          "role": "layout guide for 8 direction slots; use for spacing only, do not copy guide lines"
+        },
+        {
+          "path": "references/canonical-base.png",
+          "role": "canonical identity reference"
+        },
+        {
+          "path": "qa/contact-sheet.png",
+          "role": "approved standard-row identity, scale, and baseline reference"
+        },
+        {
+          "path": "decoded/look-anchors-approved.png",
+          "role": "approved cardinal reference strip in order 000 up, 090 screen-right, 180 down, 270 screen-left; interpolate intermediate directions evenly"
+        }
+      ],
+      "output_path": "decoded/look-row-9.png",
+      "depends_on": [
+        "look-cardinals"
+      ],
+      "generation_skill": "$imagegen",
+      "requires_grounded_generation": true,
+      "allow_prompt_only_generation": false,
+      "identity_reference_paths": [
+        "references/canonical-base.png"
+      ],
+      "look_mechanics_file": "qa/look-mechanics.md",
+      "directions": [
+        "000",
+        "022.5",
+        "045",
+        "067.5",
+        "090",
+        "112.5",
+        "135",
+        "157.5"
+      ],
+      "parallelizable_after": [
+        "look-cardinals"
+      ],
+      "derivation_policy": {
+        "may_derive": false,
+        "reason": "look directions require grounded pet-specific generation"
+      },
+      "coherent_synthesis_required": true,
+      "individual_cell_packaging_allowed": false,
+      "packaging_eligible": true,
+      "generation_size": "3072x1024",
+      "generation_quality": "high",
+      "failure_note": "First request524; one user-authorized retry502. No image outputs. API credential/model listing check passes. Retry authorization consumed; no automatic resubmission.",
+      "attempts": [
+        {
+          "verdict": "transport_failed",
+          "report": "qa/look-row-9-generation.json",
+          "http_status": 524,
+          "output_received": false,
+          "automatic_retry": false,
+          "at": "2026-10-24T10:06:37.080921+00:00"
+        },
+        {
+          "verdict": "transport_failed",
+          "report": "qa/look-row-9-retry-01-generation.json",
+          "http_status": 502,
+          "output_received": false,
+          "user_authorized_retry": true,
+          "at": "2026-10-24T10:12:09.433433+00:00"
+        }
+      ],
+      "retry_authorization": {
+        "answer": "重新提交一次，继续完成",
+        "scope": "one explicit retry after HTTP524",
+        "at": "2026-10-24T10:08:02.136361+00:00"
+      }
+    },
+    {
+      "id": "look-row-10",
+      "kind": "look-row-strip",
+      "status": "pending",
+      "prompt_file": "prompts/rows/look-row-10-v2.md",
+      "retry_prompt_file": "prompts/rows/look-row-10-v2.md",
+      "input_images": [
+        {
+          "path": "references\\reference-01.jpg",
+          "role": "pet reference"
+        },
+        {
+          "path": "references/layout-guides-spaced/look-row-10.png",
+          "role": "layout guide for 8 direction slots; use for spacing only, do not copy guide lines"
+        },
+        {
+          "path": "references/canonical-base.png",
+          "role": "canonical identity reference"
+        },
+        {
+          "path": "qa/contact-sheet.png",
+          "role": "approved standard-row identity, scale, and baseline reference"
+        },
+        {
+          "path": "decoded/look-anchors-approved.png",
+          "role": "approved cardinal reference strip in order 000 up, 090 screen-right, 180 down, 270 screen-left; interpolate intermediate directions evenly"
+        },
+        {
+          "path": "decoded/look-row-9.png",
+          "role": "completed first half of the clockwise look loop for row 10 continuity"
+        }
+      ],
+      "output_path": "decoded/look-row-10.png",
+      "depends_on": [
+        "look-cardinals",
+        "look-row-9"
+      ],
+      "generation_skill": "$imagegen",
+      "requires_grounded_generation": true,
+      "allow_prompt_only_generation": false,
+      "identity_reference_paths": [
+        "references/canonical-base.png"
+      ],
+      "look_mechanics_file": "qa/look-mechanics.md",
+      "directions": [
+        "180",
+        "202.5",
+        "225",
+        "247.5",
+        "270",
+        "292.5",
+        "315",
+        "337.5"
+      ],
+      "parallelizable_after": [
+        "look-cardinals",
+        "look-row-9"
+      ],
+      "derivation_policy": {
+        "may_derive": false,
+        "reason": "look directions require grounded pet-specific generation"
+      },
+      "coherent_synthesis_required": true,
+      "individual_cell_packaging_allowed": false,
+      "packaging_eligible": true,
+      "generation_size": "3072x1024",
+      "generation_quality": "high"
+    }
+  ]
+}

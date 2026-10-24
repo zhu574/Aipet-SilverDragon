@@ -1,0 +1,105 @@
+{
+  "reviewer": "independent-standard-motion-qa-worker",
+  "review_date": "2026-10-24",
+  "scope": "Nine standard animation rows 0-8 only; no look-direction approval",
+  "visual_qa": "pass_after_deterministic_jump_replacement",
+  "art_regeneration_required": false,
+  "review_method": "Inspected complete standard contact sheet and ordered full-frame snapshots with enlarged face strips for all nine rows; checked existing frame counts, bounding boxes and adjacent-change measurements. This review does not claim real-time GIF playback.",
+  "evidence_paths": [
+    "qa/contact-sheet.png",
+    "qa/standard-motion-snapshots/idle.jpg",
+    "qa/standard-motion-snapshots/running-right.jpg",
+    "qa/standard-motion-snapshots/running-left.jpg",
+    "qa/standard-motion-snapshots/waving.jpg",
+    "qa/standard-motion-snapshots/jump-comparison.jpg",
+    "qa/standard-motion-snapshots/failed.jpg",
+    "qa/standard-motion-snapshots/waiting.jpg",
+    "qa/standard-motion-snapshots/running.jpg",
+    "qa/standard-motion-snapshots/review.jpg",
+    "qa/standard-motion-snapshots/metrics.json",
+    "qa/standard-frames-review.json"
+  ],
+  "identity": {
+    "verdict": "pass",
+    "evidence": "All nine rows retain the silver-white long hair, paired pale horns, amethyst eyes, lavender attached wings and tail, white high-neck gown, long mature proportions and restrained adult expression. Side-facing motion naturally changes visible garment surfaces; no replacement character, new prop or chibi drift is visible."
+  },
+  "rows": [
+    {
+      "state": "idle",
+      "row": 0,
+      "frames": 6,
+      "verdict": "pass",
+      "evidence": "Quiet front-facing rest; open-to-closed-to-open eyelids provide visible microvariation while hands, gown and feet stay stable. No greeting, task gesture or directional travel."
+    },
+    {
+      "state": "running-right",
+      "row": 1,
+      "frames": 8,
+      "verdict": "pass",
+      "evidence": "Nose and body face screen-right throughout; leg stride, arm position, skirt and tail visibly alternate. Complete silhouette and stable practical height. Long gown makes this a dignified moving gait rather than an exaggerated sprint, appropriate to the approved persona."
+    },
+    {
+      "state": "running-left",
+      "row": 2,
+      "frames": 8,
+      "verdict": "pass",
+      "evidence": "Nose, torso and stride face screen-left throughout; alternating leading leg and arm are visible. Hair, skirt and attached tail follow the travel direction. Width varies with normal stride and tail motion without a conspicuous identity or height pop."
+    },
+    {
+      "state": "waving",
+      "row": 3,
+      "frames": 4,
+      "verdict": "pass",
+      "evidence": "The hand rises to shoulder height for a small restrained greeting and returns; feet and main body remain anchored. No detached wave marks or new prop."
+    },
+    {
+      "state": "jumping",
+      "row": 4,
+      "frames": 5,
+      "verdict": "conditional_pass",
+      "evidence": "Generated source has a coherent controlled hop with lifted feet, raised skirt and hair follow-through. Current component-normalized frames all have y=5..203 and suppress the source's actual vertical trajectory. The stable-slots comparison visibly restores anticipation, ascent, apex and landing without regenerating art.",
+      "required_action": "Replace only jumping extraction with stable-slots, then rerun frame inspection with allow-stable-slots, atlas composition and motion previews.",
+      "failure_class": "extraction normalization, not source-art defect"
+    },
+    {
+      "state": "failed",
+      "row": 5,
+      "frames": 8,
+      "verdict": "pass",
+      "evidence": "Head and gaze lower through middle frames, then recover to composed forward attention. Restrained setback reaction preserves the noble adult persona, with no detached symbols or extra props."
+    },
+    {
+      "state": "waiting",
+      "row": 6,
+      "frames": 6,
+      "verdict": "pass",
+      "evidence": "Expectant gaze, small head turn and waist-level open-hand request distinguish the state from quiet idle and reflective review. Body baseline and identity remain steady."
+    },
+    {
+      "state": "running",
+      "row": 7,
+      "frames": 6,
+      "verdict": "pass",
+      "evidence": "Focused hand-near-chin and attentive head/eyelid changes communicate active thought. Feet stay grounded; this state does not depict literal jogging, direction travel or speed effects."
+    },
+    {
+      "state": "review",
+      "row": 8,
+      "frames": 6,
+      "verdict": "pass",
+      "evidence": "Restrained head inclination and deliberate eye closure/reopening give a reflective review gesture, while hands stay low and no new review prop is introduced. This is visually distinct from the hand-near-chin processing row."
+    }
+  ],
+  "structural_review": {
+    "verdict": "pass",
+    "evidence": "All expected frame counts present; existing deterministic review reports no errors or warnings, no border clipping and no empty required frames. Normalized ordered snapshots show stable scale and baseline apart from the intentional jump trajectory requiring the stated correction."
+  },
+  "accepted_warnings": [
+    "Full-body mature proportions leave limited facial detail at 192x208 display size; the approved adult expression remains identifiable.",
+    "Directional travel uses a restrained long-gown gait rather than a cartoon sprint."
+  ],
+  "chroma_review": "Deferred to the single final extended-atlas despill pass and atlas validator. Pre-cleanup green spill is not an art regeneration trigger.",
+  "repair_rows": [],
+  "deterministic_corrections": ["jumping: stable-slots extraction"],
+  "completion_condition": "Parent must complete and verify the jumping deterministic extraction replacement before treating all nine standard rows as fully approved."
+}

@@ -1,0 +1,24 @@
+# Local credentials and configuration
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*credentials*.json
+*secrets*.json
+adapter/adapter.local.json
+
+# Local installation state and generated scratch files
+.local/
+__pycache__/
+*.pyc
+.venv/
+node_modules/
+*.log
+*.tmp
+Thumbs.db
+.DS_Store
+
+# Reproducible or duplicate release media
+releases/*/spritesheet.png
+releases/*/qa/previews/*-still.png

@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "method": "stable-slots",
+  "reason": "Independent visual QA confirmed components recentered every frame to y5..203 and erased vertical motion. Stable-slots retains original source lift/apex/landing under a shared scale.",
+  "allowed_warning": "stable-slots component-preference warning",
+  "body_height_pixels": [
+    175,
+    178,
+    179,
+    174,
+    175
+  ],
+  "reviewed_at": "2026-10-24T09:26:22.692789+00:00"
+}

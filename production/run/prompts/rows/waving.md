@@ -1,0 +1,9 @@
+Create one animation strip for silver-dragon, state waving: exactly 4 complete ADULT full-body poses, evenly spaced left-to-right in ONE row on flat pure #00FF00.
+
+Input roles: original artwork is secondary design context; layout guide specifies spacing only (do not draw it); canonical base is the authoritative approved face, outfit, materials and mature anatomy. Keep her refined adult face, violet almond eyes, silver hair, horns, compact lavender membrane wings, scaled tapered tail and white/silver/lavender gown. Preserve noble, calm, intelligent body language and high-quality clean anime painting. Do not turn her into a chibi.
+
+Action: Four composed greeting phases: hand low; raise open hand to shoulder height; small graceful wrist tilt; lower hand. Calm intelligent face, no grin, bounce or excited posing.
+
+CRITICAL LAYOUT: output 1536x1024, 4 invisible slots of 384x1024. Each COMPLETE character, including horns, hair, wings, shoes, gown and tail, must fit INSIDE x=64..320 of its own slot and y=302..722, approximately 420 pixels tall. Make the whole character SMALLER within the canvas, retaining mature body proportions. The generous empty green above, below and between figures is intentional production space. Do not zoom in to fill the height. Leave continuous clear green gaps at every slot boundary; all outer figures have the same generous margin. No wing, skirt, hair or tail may touch or overlap another pose. All frames use the same apparent scale and shoe baseline near y=722 (only jumping lifts feet). Use the guide's inner safe rectangles only as invisible construction references.
+
+Polished precise face, eyelids and lips; consistent anatomy and costume. No text, panels, lines, grid, labels, shadows, floor patches, glows, gradients, blur, detached effects or new props. Pure green even beneath feet; no green lighting on the character. Every frame must be complete and cleanly separable.

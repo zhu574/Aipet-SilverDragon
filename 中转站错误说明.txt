@@ -1,0 +1,17 @@
+请协助检查 gpt-image-2 图片编辑/参考图生图接口的上游响应。模型列表接口可正常访问，目标模型存在，但生图连续两次失败，未收到图片。请核对下列请求是否完成及是否计费，并检查Cloudflare与源站超时/网关问题：
+
+1. HTTP524 origin_response_timeout
+UTC时间：2026-10-24 10:04:35
+Ray ID：a4f82573f9b888cc
+源站120秒未完整响应。
+
+2. 用户确认后仅重新提交一次：HTTP502 origin_bad_gateway
+UTC时间：2026-10-24 10:09:43
+Ray ID：a4f82e64bb181ec0
+源站返回无效或不完整响应。
+
+接口：https://api.awmc-codex.top/v1
+调用方式：图片编辑，5张参考图，gpt-image-2，quality=high，size=3072x1024。
+客户端自动重试次数：0。两次均无本地图片输出。
+
+本说明不含API密钥。

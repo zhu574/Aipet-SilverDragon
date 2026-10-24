@@ -1,0 +1,21 @@
+{
+  "phase": "poses",
+  "art_direction_revision": 2,
+  "active_prompt": "prompts/base-pet-regal-v2.md",
+  "base_attempt": "base-regal-02",
+  "image_quality": "high",
+  "image_size": "1536x2304",
+  "started_at": "2026-10-24T07:40:33.300719Z",
+  "status": "waiting_for_relay_recovery",
+  "base_source": "generated/base-regal-02.png",
+  "base_accepted_at": "2026-10-24T07:53:53.5540478Z",
+  "standard_rows_complete": 9,
+  "active_job": "look-row-9 upstream failure; user-authorized retry consumed",
+  "user_animation_approval": "按这一版继续制作动画",
+  "cardinals_complete": true,
+  "installed": false,
+  "full_v2_installed": false,
+  "preview_installed": true,
+  "preview_package_id": "silver-dragon-preview",
+  "preview_app_load_verified": false
+}

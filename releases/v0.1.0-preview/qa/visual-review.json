@@ -1,0 +1,19 @@
+{
+  "visual_qa": "pass",
+  "scope": "user-requested v1 basic-actions trial; not v2 acceptance",
+  "reviewer": "independent-preview-v1-qa-worker",
+  "evidence": [
+    "Complete ordered contact sheet and9 native stills inspected; first-frame GIF renders inspected",
+    "Expected counts6,8,8,4,5,8,6,6,6; all visible complete and identity-consistent",
+    "Mature silver-haired dragon woman, violet eyes, horns, lavender wings/tail and white gown; calm noble persona retained",
+    "Jump stable-slot correction preserves rise,apex,return; no clipping or visible accidental interior seam holes",
+    "Deterministic atlas and despill pass; alpha preserved"
+  ],
+  "limitations": [
+    "At192x208 eye and hand details are subtle; pale costume loses contrast on light backgrounds",
+    "Directional long-gown movement reads as restrained gait",
+    "No independent real-time GIF playback or in-app rendering confirmation",
+    "16-direction gaze absent from preview"
+  ],
+  "repair_rows": []
+}

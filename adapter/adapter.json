@@ -1,0 +1,5 @@
+{
+  "base_url": "https://api.awmc-codex.top/v1",
+  "model": "gpt-image-2",
+  "timeout_seconds": 240
+}
